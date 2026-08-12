@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set Item Type field automatically for mobiles</description>
+        <field>cmdb_ci</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Set Loaner Item Type</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading)
+        return;
+
+    g_form.getReference('cmdb_ci',checkName);
+    /* This grabs the record for the configuration item, then performs the below function using that record. See additional note below for usage tips. */
+
+    function checkName(ci){
+        var name = ci.name + '';
+        // Check the name of the CI using regular expressions; 
+        // Set and lock Item type field based on the CI name.
+        if (name.match(/.*blackberry.*/i) || name.match(/.*iphone.*/i) || name.match(/.*android.*/i)) {
+            g_form.setValue('item_type', 'cmdb_ci_mobile_device','Mobile Phone');
+            g_form.setReadOnly('item_type', true);
+        } else if(name.match(/.*macbook.*/i)){
+            g_form.setValue('item_type', 'cmdb_ci_computer','Laptop');
+            g_form.setReadOnly('item_type', true);
+        } else {
+            g_form.setReadOnly('item_type', false);
+        }
+    }
+
+    /***** 
+    Yes, g_form.getReference() fell from grace as a recommended practice some releases ago. However, it is still broadly used in a pinch to fetch a single record without using the rigors of GlideAJAX; a quick code search will confirm hundreds of occurrences. Use with caution! For more information: 
+
+    https://developer.servicenow.com/dev.do#!/reference/api/tokyo/client/c_GlideFormAPI#r_GlideForm-GetReference_S_F 
+    *****/
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 21:07:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da817b4f8ca203107f449a07073a4130</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Loaner Item Type</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">facc5d74b4a203107f4459943045867c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">facc5d74b4a203107f4459943045867c</sys_scope>
+        <sys_update_name>sys_script_client_da817b4f8ca203107f449a07073a4130</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 21:07:40</sys_updated_on>
+        <table>x_cdltd_loaner_r_0_loaner_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
