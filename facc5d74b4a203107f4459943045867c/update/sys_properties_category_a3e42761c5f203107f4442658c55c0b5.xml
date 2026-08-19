@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Loaner Request</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-19 14:42:28</sys_created_on>
+        <sys_id>a3e42761c5f203107f4442658c55c0b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Loaner Request</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">facc5d74b4a203107f4459943045867c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">facc5d74b4a203107f4459943045867c</sys_scope>
+        <sys_update_name>sys_properties_category_a3e42761c5f203107f4442658c55c0b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-19 14:42:28</sys_updated_on>
+        <title><![CDATA[<p><span style="font-family: &#39;arial black&#39;, &#39;avant garde&#39;; font-size: 18pt;">Loaner Request Properties</span></p>
+<p><strong>Contact:</strong> <a href="mailto:samuel.ogwu&#64;servicenow.com" rel="nofollow">samuel.ogwu&#64;servicenow.com</a></p>
+<p><img title="icon48.png" src="/sys_attachment.do?sys_id&#61;7555a761c5f203107f4442658c55c064" alt="" width="48" height="48" /></p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=a3e42761c5f203107f4442658c55c0b5"/>
+</record_update>
