@@ -38,11 +38,11 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p data-uuid="d0cd35c9787a4f01af7764e28671baf9"><span style="box-sizing: border-box; text-decoration: underline;">Subject</span>: Your loaner&nbsp;${item_type}&nbsp;is ready for pick up</p>
-<p data-uuid="89810479e8f842068076a771695e52ed"><span style="box-sizing: border-box; text-decoration: underline;">Message HTML</span>: Dear&nbsp;${requested_for},</p>
+        <message_html><![CDATA[<p data-uuid="89810479e8f842068076a771695e52ed">Dear&nbsp;${requested_for},</p>
 <p data-uuid="5fcfab5a214c4437af0e75fdbe47b225">The&nbsp;${item_type} (${cmdb_ci})&nbsp;is available for pick up at&nbsp;${depot}.</p>
 <p data-uuid="0ad552a5a74a41fc8f0a867474da3d14">Your reservation is scheduled to begin&nbsp;${start_date}. Please return the item to the same location you picked it up by&nbsp;${end_date}.</p>
-<p data-uuid="65f145b3de1f41cbb602640dea0c2b3f">You will receive a return reminder notification.</p>]]></message_html>
+<p data-uuid="65f145b3de1f41cbb602640dea0c2b3f">You will receive a return reminder notification.</p>
+<p>${mail_script:x_cdltd_loaner_r_0_loaner_request_script_1}</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Loaner Item Pick Up</name>
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>faba3fa1c53603107f4442658c55c06d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Loaner Item Pick Up</sys_name>
         <sys_overrides/>
         <sys_package display_value="Loaner Request" source="x_cdltd_loaner_r_0">facc5d74b4a203107f4459943045867c</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Loaner Request">facc5d74b4a203107f4459943045867c</sys_scope>
         <sys_update_name>sysevent_email_action_faba3fa1c53603107f4442658c55c06d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-08-19 16:24:11</sys_updated_on>
+        <sys_updated_on>2026-08-20 16:17:07</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
